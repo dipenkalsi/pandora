@@ -4,7 +4,6 @@ import Footer from './Footer'
 import logo from "../assets/logo-no-background.png"
 import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
-import walletConnectionProvider from '../context/walletConnectionProvider'
 import Payment from './Payment'
 const styles={
     loginPage:`w-screen h-screen flex flex-col items-center justify-between`,

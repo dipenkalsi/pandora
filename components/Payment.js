@@ -8,7 +8,8 @@ import { useWallet } from '@solana/wallet-adapter-react'
 import Footer from './Footer'
 import Image from 'next/image'
 import logo from "../assets/logo-no-background.png"
-import { program } from '@project-serum/anchor/dist/cjs/spl/token'
+
+
 const anchor=require('@project-serum/anchor')
 const {web3}=anchor
 const {SystemProgram}=web3
@@ -72,7 +73,7 @@ const Payment = () => {
             ...defaultAccounts,
           },
         })
-        alert('Transaction proceed')
+        alert('Transaction successful')
       } catch (e) {
         alert(e.message)
       }
