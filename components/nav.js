@@ -1,7 +1,8 @@
 import NavLink from './navLink'
-
+import logo from '../assets/logo-no-background.png'
+import Image from 'next/image'
 const styles = {
-  nav: `bg-black h-screen w-96 p-5 py-10 `,
+  nav: `max-h-[110vh] w-96 p-5 pb-10 border-r border-gray-600`,
   link: `hover:text-[#fff]`,
   playlistName: `text-[#b3b3b3] cursor-default text-sm hover:text-[#fff]`
 }
@@ -9,7 +10,10 @@ const styles = {
 const Nav = () => {
   return (
     <div className={styles.nav}>
-      <div className='mb-10'>
+      <div className=''>
+        <div className='pb-6'>
+        <Image src={logo} height="25" width="200"></Image>
+        </div>
         <NavLink icon='assets/home.svg' title='Home' className={styles.link} />
         <NavLink
           icon='assets/search.svg'
@@ -23,7 +27,7 @@ const Nav = () => {
         />
       </div>
 
-      <div className='mb-5 border-b border-gray-100/10'>
+      <div className='mb-5 border-b border-gray-600'>
         <NavLink
           icon='assets/add.svg'
           title='Create Playlist'
@@ -57,7 +61,7 @@ const Nav = () => {
           Country
         </p>
         <p className={styles.playlistName}>
-          Your Top Songs 2019
+          Your Top Songs 2022
         </p>
       </div>
     </div>

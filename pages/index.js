@@ -1,6 +1,8 @@
-import HomePage from './homepage'
-
+import Login from '../components/Login'
+import { useContext } from 'react'
+import { PandoraContext } from '../context/context'
 export default function Home() {
+  const {updateProgress,updateVolume}=useContext(PandoraContext)
   return (
     <div>
       <audio
@@ -10,7 +12,7 @@ export default function Home() {
         onVolumeChange={e => updateVolume(e)}
         onTimeUpdate={e => updateProgress(e)}
       />
-      <HomePage />
+      <Login/>
       {/* temporarily render homepage before you build Login */}
     </div>
   )
